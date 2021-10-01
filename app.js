@@ -1,16 +1,10 @@
-function primeNumber(lowNumber, highNumber) {
-  for (let i = lowNumber; i <= highNumber; i++) {
-    let isPrime = true;
-    for (let j = 2; j <= i; j++) {
-      if (i % j === 0 && j !== i) {
-        isPrime = false;
-      }
-    }
-    if (isPrime) {
-      console.log(i);
-    }
+let input = Number(process.argv[2]);
+function calculateArea() {
+  if (input > 0) {
+    let result = 3.14 * Math.pow(input, 2);
+    console.log(result);
+  } else {
+    console.log("lutfen pozitif bir deger giriniz...");
   }
 }
-
-//console.log(process.argv[2], process.argv[3]);
- primeNumber(Number(process.argv[2]), Number(process.argv[3]));
+calculateArea();
